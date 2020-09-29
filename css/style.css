@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 body {
-  background: url("../img/bg.png") center;
+  background: url("../img/bg.jpg") center;
 }
 
 .container {
@@ -112,13 +112,20 @@ body {
   .content {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
-    -ms-grid-rows: 1fr 200px 1fr 1fr 1fr;
-        grid-template-rows: 1fr 200px 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 200px 1fr 1fr 1fr 10px;
+        grid-template-rows: 1fr 200px 1fr 1fr 1fr 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .content {
+    -ms-grid-rows: 1fr 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 400px 10px;
+        grid-template-rows: 1fr 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 400px 10px;
   }
 }
 
 .top__img1 {
-  background: url("../img/img1.png") center no-repeat;
+  background: url("../img/img1.jpg") center no-repeat;
   background-size: cover;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -138,8 +145,19 @@ body {
   }
 }
 
+@media (max-width: 767.98px) {
+  .top__img1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1 / span 10;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 2;
+    grid-row: 5 / 7;
+  }
+}
+
 .top__img2 {
-  background: url("../img/img2.png") no-repeat;
+  background: url("../img/img2.jpg") no-repeat;
   background-size: 100% 100%;
   -ms-grid-column: 4;
   -ms-grid-column-span: 5;
@@ -153,6 +171,16 @@ body {
     -ms-grid-column: 3;
     -ms-grid-column-span: 6;
     grid-column: 3 / span 6;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top__img2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1 / span 10;
     -ms-grid-row: 1;
     grid-row: 1;
   }
@@ -190,6 +218,14 @@ body {
     grid-column: 1 / span 2;
     -ms-grid-row: 4;
     grid-row: 4;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top-block {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1 / span 10;
   }
 }
 
@@ -239,6 +275,29 @@ body {
   .top-block span {
     font-size: 175px;
     line-height: 135px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top-block span {
+    font-size: 145px;
+    padding: 15px 0px 0px 0px;
+    max-height: 250px;
+    margin: auto;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+
+@media (max-width: 479.98px) {
+  .top-block span {
+    font-size: 120px;
+    line-height: 110px;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    width: 200px;
   }
 }
 
@@ -306,9 +365,9 @@ body {
 .bottom-top .brand {
   position: absolute;
   top: 40%;
+  right: 20px;
   -webkit-transform: translate(0, -25%);
           transform: translate(0, -25%);
-  right: 20px;
   font-family: 'Onyx';
   opacity: 0.97;
   color: #ffffff;
@@ -333,8 +392,28 @@ body {
   }
 }
 
+@media (max-width: 767.98px) {
+  .bottom-top .brand {
+    font-size: 130px;
+  }
+}
+
+@media (max-width: 616px) {
+  .bottom-top .brand {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 524px) {
+  .bottom-top .brand {
+    width: 250px;
+    font-size: 100px;
+    padding: 0px 0px 0px 100px;
+  }
+}
+
 .bottom__img1 {
-  background: url("../img/img3.png") center no-repeat;
+  background: url("../img/img3.jpg") center center no-repeat;
   background-size: cover;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -354,8 +433,19 @@ body {
   }
 }
 
+@media (max-width: 767.98px) {
+  .bottom__img1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1 / span 10;
+    -ms-grid-row: 10;
+    grid-row: 10;
+    background-size: center center;
+  }
+}
+
 .bottom__img2 {
-  background: url("../img/img4.png") center no-repeat;
+  background: url("../img/img4.jpg") center no-repeat;
   background-size: cover;
   -ms-grid-column: 4;
   -ms-grid-column-span: 4;
@@ -374,8 +464,18 @@ body {
   }
 }
 
+@media (max-width: 767.98px) {
+  .bottom__img2 {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1 / span 10;
+  }
+}
+
 .bottom__img3 {
-  background: url("../img/img5.png") center no-repeat;
+  background: url("../img/img5.jpg") center no-repeat;
   background-size: cover;
   -ms-grid-column: 8;
   -ms-grid-column-span: 2;
@@ -393,5 +493,16 @@ body {
     -ms-grid-row: 3;
     -ms-grid-row-span: 2;
     grid-row: 3 / 5;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bottom__img3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1 / span 10;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 3;
+    grid-row: 7 / 10;
   }
 }

@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 body { 
-  background: url('../img/bg.png') center;
+  background: url('../img/bg.jpg') center;
 }
 
 .container {
@@ -122,14 +122,18 @@ body {
 
   @media (max-width: $md2 + px) {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 200px 1fr 1fr 1fr;
+    grid-template-rows: 1fr 200px 1fr 1fr 1fr 10px;
+    // padding: 0px 0px 40px 0px;
+  }
+  @media (max-width: $md3 + px) {
+    grid-template-rows: 1fr 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 400px 10px;
   }
 
 }
 
 
 .top__img1 {
-  background: url('../img/img1.png') center no-repeat;
+  background: url('../img/img1.jpg') center no-repeat;
   background-size:cover;
   grid-column: 1 / span 3;
   grid-row: 1 ;
@@ -138,38 +142,27 @@ body {
     grid-column: 1 / span 2;
     grid-row: 1 ;  
   }
+  @media (max-width: $md3 + px) {
+    // display: none;
+    grid-column: 1 / span 10;
+    grid-row: 5 / 7;
+    // background-size: center center ;
+  }
+  
 }
 
-// .top__img1:before{
-//   width: 0;
-//   height: 0;
-//   padding: 25%;
-//   border-radius: 50%;
-  
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-
-//   background-color: var(--photoboxOverlay, rgba(0, 0, 0, .8));
-//   transition: transform calc(var(--photoboxAnimationDuration, .2s) / 2) ease calc(var(--photoboxAnimationDuration, .2s) / 2);
-//   will-change: transform;
-//   transform: scale(0);
-// }
-
-// .top__img1:hover .top__img1:before{
-//   transform: scale(2);
-//   transition-duration: var(--photoboxAnimationDuration, .2s);
-//   transition-delay: 0s;
-// }
 .top__img2 {
-  background: url('../img/img2.png') no-repeat;
+  background: url('../img/img2.jpg') no-repeat;
   background-size: 100% 100%;
   grid-column: 4 / 9;
   grid-row: 1;
-  // display: none;
   @media (max-width: $md2 + px) {
     grid-column: 3 / span 6;
     grid-row: 1 ;  
+  }
+  @media (max-width: $md3 + px) {
+    grid-column: 1 / span 10;
+    grid-row: 1  ;  
   }
 }
 .top-block {
@@ -188,6 +181,10 @@ body {
     width:100%;
     grid-column: 1 / span 2;
     grid-row: 4; 
+  }
+  
+  @media (max-width: $md3 + px) { 
+    grid-column: 1 / span 10;
   }
 
   &::before { 
@@ -225,6 +222,21 @@ body {
     @media (max-width: $md2 + px) {
       font-size:175px;
       line-height: 135px;
+    }
+    @media (max-width: $md3 + px) {
+      font-size: 145px;
+      padding: 15px 0px 0px 0px;
+      max-height: 250px;
+      margin: auto;
+      top:50%;
+      transform: translate(0, -50%);
+    }
+    @media (max-width: $md4 + px) { 
+      font-size: 120px;
+      line-height: 110px;
+      top:0;
+      transform: translate(0,0);
+      width: 200px;
     }
 
   }
@@ -277,8 +289,8 @@ body {
   & .brand {
     position: absolute;
     top:40%;
-    transform: translate(0,-25%);
     right:20px;
+    transform: translate(0,-25%);
     font-family: 'Onyx';
     opacity: 0.97;
     color: #ffffff;
@@ -295,12 +307,24 @@ body {
       top:50%;
       transform: translate(0,-50%);  
     }
+    @media (max-width: $md3 + px) {
+      font-size: 130px;
+    }
+    @media (max-width: 616px) { 
+      font-size: 100px;
+    }
+    @media (max-width: 524px) { 
+      width: 250px;
+      font-size: 100px;
+      padding: 0px 0px 0px 100px;
+      
+    }
   }
 }
 
 
 .bottom__img1 {
-  background: url('../img/img3.png') center no-repeat;
+  background: url('../img/img3.jpg') center center no-repeat;
   background-size: cover;
   grid-column: 1 / 4;
   grid-row: 3;
@@ -310,10 +334,15 @@ body {
     grid-column: 1 / span 2;
     grid-row: 3;  
   }
+  @media (max-width: $md3 + px) {
+    grid-column: 1 / span 10;
+    grid-row:  10 ; 
+    background-size: center center; 
+  }
 
 }
 .bottom__img2 {
-  background: url('../img/img4.png') center no-repeat;
+  background: url('../img/img4.jpg') center no-repeat;
   background-size:cover;
   grid-column: 4 / 8;
   grid-row: 3;
@@ -322,16 +351,24 @@ body {
     grid-column: 1 / span 8;
     grid-row: 5; 
   }
+  @media (max-width: $md3 + px) {
+    grid-row: 3; 
+    grid-column: 1 / span 10;
+  }
 }
 .bottom__img3 {
-  background: url('../img/img5.png')center no-repeat;
+  background: url('../img/img5.jpg')center no-repeat;
   background-size:cover;
   grid-column: 8 / 10;
   grid-row: 2 / 4;
   // display: none;
   @media (max-width: $md2 + px) {
-    grid-column: 3 / span 6;
+    grid-column: 3 / span 6 ;
     grid-row: 3 / 5;  
+  }
+  @media (max-width: $md3 + px) {
+    grid-column: 1 / span 10 ;
+    grid-row: 7 / 10;  
   }
 
 }
