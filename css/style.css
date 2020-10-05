@@ -1,11 +1,12 @@
 @charset "UTF-8";
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
 @font-face {
   font-family: "Onyx";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Sardonyx.otf") format("otf"), url("../fonts/Sardonyx.ttf") format("tff");
+  src: url("./fonts/Sardonyx.otf") format("otf"), url("./fonts/Sardonyx.ttf") format("tff");
 }
 
 * {
@@ -101,16 +102,16 @@ body {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[9];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(9, 1fr);
-  -ms-grid-rows: (300px)[3];
+  -ms-grid-rows: (300px);
       grid-template-rows: repeat(3, 300px);
   grid-gap: 10px;
 }
 
 @media (max-width: 992.98px) {
   .content {
-    -ms-grid-columns: (1fr)[5];
+    -ms-grid-columns: (1fr);
         grid-template-columns: repeat(5, 1fr);
     -ms-grid-rows: 1fr 200px 1fr 1fr 1fr 10px;
         grid-template-rows: 1fr 200px 1fr 1fr 1fr 10px;
@@ -371,10 +372,10 @@ body {
   font-family: 'Onyx';
   opacity: 0.97;
   color: #ffffff;
-  font-size: 170px;
+  font-size: 150px;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: -4.75px;
+  letter-spacing: -4px;
 }
 
 @media (max-width: 1192px) {
